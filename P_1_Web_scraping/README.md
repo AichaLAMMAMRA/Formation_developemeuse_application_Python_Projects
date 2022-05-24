@@ -1,4 +1,3 @@
-# Formation Developpeuse application -Python
 # Projet_2  Web-scrapping
 
  Fichiers category.py & scrapBooks.py (dans la répertoire libScrapBooks) contiennent les fonctions de scraping du site exemple http://books.toscrape.com/index.html
@@ -11,15 +10,28 @@ Dans le terminal se mettre dans ce dossier local
 
 Mise en place du projet :
 
-1. Création d'un environnement virtuel
-    
+Créer un environnement virtuel :
+```bash
     python<version> -m venv nom_env_virtuel
+```
+Activer cet environnement virtuel: 
+    sur windows
+```bash
+    . env/Scripts/activate 
+```
+   sur mac ou linux
+```bash
     source nom_env_virtuel/bin/activate
-
-2. Installation des packages
-    
+```
+Packages
+---
+Installation des packages
+``` bash   
     pip<version> install -r requirements.txt
-
-3. Execution du script
-
+```
+Exécution
+---
+Execution du script
+```bash
     python<version> main.py
+```
