@@ -1,16 +1,21 @@
 
 import requests
-from libScrapBooks.category import scrape_categories
+
+from libScrapBooks.book import scrapBook
+from libScrapBooks.categories import scrapAllCategories
 
 main_page ="http://books.toscrape.com/"
 
 
 
+dict= []
+
 
 print("\n_______start scraping _________ \n")
 
-#scrape_category.scrape__all_books_category (url)
-scrape_categories(main_page)
+#dict = book.scrapBook(url)
+scrapAllCategories('http://books.toscrape.com/')
+
 
 print("\n_______finish scraping _________\n")
 
