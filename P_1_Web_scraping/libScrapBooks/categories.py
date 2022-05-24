@@ -3,9 +3,8 @@ import re                               # import tout bs4 pour test type objet
 import csv
 import requests
 
-import book
-
 from bs4 import BeautifulSoup
+from  libScrapBooks import book
 
 
 
