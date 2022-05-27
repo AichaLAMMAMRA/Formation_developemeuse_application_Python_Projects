@@ -4,6 +4,8 @@ import csv
 import requests
 
 from bs4 import BeautifulSoup
+
+from link.links import MAIN_PAGE
 from  libScrapBooks import book
 
 
@@ -17,7 +19,7 @@ def scrapAllCategories (main_page) :
 	
 	# Récupérer toutes les catégories de livres
 	for category in soup.select('.side_categories ul > li > ul > li > a'):
-		categories.append({"name": category.text.strip(), "url": "http://books.toscrape.com/" + category["href"]}) 
+		categories.append({"name": category.text.strip(), "url": MAIN_PAGE + category["href"]}) 
 
 	for categorie in categories :
 		scrapByCategory(categorie["url"])
@@ -55,7 +57,7 @@ def scrapBooksOfCategory (soup):
 	for h3 in all_h3:
 		link_to_books = h3.select('a')
 		for a in link_to_books:
-			url_book ='http://books.toscrape.com/' + 'catalogue/' + a['href'].strip('../../../')
+			url_book = MAIN_PAGE + 'catalogue/' + a['href'].strip('../../../')
 			book_infos = book.scrapBook(url_book)
 			all_books_infos.append(book_infos)
 

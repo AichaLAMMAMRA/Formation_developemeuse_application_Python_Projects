@@ -4,6 +4,7 @@ import csv
 import requests                        # module qui permet d'interagir avec une url
 
 from bs4 import BeautifulSoup
+from link.links import MAIN_PAGE
 
 
 
@@ -25,7 +26,7 @@ def scrapBook(url_book):
     book_category = getCategoryBook(soup)  
     # Scrape l'url de l'image                           
     imag_url = soup.select('img')[0]
-    book_imag_link = "https://books.toscrape.com/" + imag_url.get('src').strip('../../')
+    book_imag_link = MAIN_PAGE + imag_url.get('src').strip('../../')
     # crape la notation
     book_review_rating = scrubReviewRating(soup)
     # Scrape la description du livre                
