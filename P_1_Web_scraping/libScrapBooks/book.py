@@ -12,6 +12,8 @@ from link.links import MAIN_PAGE
 
 def scrapBook(url_book):
 
+	print (" scrapAllCategories  function")
+
     # ********* Extraire des données d'un livre et enregistrer ses données  dans un dictionnaire ********** #
     '''
 	Args:

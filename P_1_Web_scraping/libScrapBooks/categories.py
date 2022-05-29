@@ -12,6 +12,8 @@ from  libScrapBooks import book
 
 def scrapAllCategories (main_page) :
 
+	print (" scrapAllCategories  function")
+
 	#______Fonction contenant l'extraction successive des catégories des livres_____#
    
 	categories = []
@@ -26,6 +28,8 @@ def scrapAllCategories (main_page) :
 		
 
 def scrapByCategory (url_categorie):
+
+	print (" scrapByCategory  function")
 	
 	'''Récupération des données de tous les livres d'une catégorie'''
 
@@ -95,6 +99,7 @@ def downloadImagCategory (all_books_infos):
 def nombrePageCategorie (soup):
 
 	''' Cette fonction détermine le nombre de pages pour une catégorie '''
+	
 	page = (soup.find("li", {"class": "current"}))
 
 	if page is None:
@@ -104,6 +109,5 @@ def nombrePageCategorie (soup):
 		page = str(page)
 		page = page.split()[5]
 		nb_page = int (page)
-		print("nb_pages ", nb_page)
 
 	return nb_page
