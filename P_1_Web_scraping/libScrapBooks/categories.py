@@ -1,9 +1,9 @@
-import os                               # module système pour navigation dans arborescence dossiers
-import re                               # import tout bs4 pour test type objet
+import os
 import csv
 import requests
 
-from bs4 import BeautifulSoup
+
+from bs4 import BeautifulSoup                               
 
 from link.links import MAIN_PAGE
 from  libScrapBooks import book
