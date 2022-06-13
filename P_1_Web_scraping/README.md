@@ -21,7 +21,7 @@ Activer cet environnement virtuel:
 ```
    sur mac ou linux
 ```bash
-    source nom_env_virtuel/bin/activate
+    nom_env_virtuel/Scripts/activate.bat
 ```
 Packages
 ---
